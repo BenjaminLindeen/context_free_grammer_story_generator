@@ -5,11 +5,10 @@
 A **Context-Free Grammar (CFG)** is a set of replacement rules utilized to produce strings. Despite seeming simplistic, a CFG can generate intricate textual representations when equipped with a comprehensive set of rules.
 
 **Example Output:**
-the cat bit the dog.
-the girl chased the boy.
-the cat chased the boy and the boy kissed the cat.
-the cat bit the dog and the dog kissed the girl and the dog chased the girl.
-
+1. The cat bit the dog.
+2. The girl chased the boy.
+3. The cat chased the boy and the boy kissed the cat.
+4. The cat bit the dog and the dog kissed the girl and the dog chased the girl.
 
 Python modules:
 - `my_rng.py`: A random number generating system.
@@ -23,11 +22,11 @@ These modules collaborate; the CFG text-generator will harness the RNG tool for 
 
 CFGs consist of substitution rules. Here's a rudimentary grammar:
 
-Start ⇒ Story ’.’
-Story ⇒ Phrase
-Story ⇒ Phrase ’and’ Story
+1. Start ⇒ Story ’.’
+2. Story ⇒ Phrase
+3. Story ⇒ Phrase ’and’ Story
 
-Each rule embodies a left-hand-side variable and a right-hand-side substitution. A variable can possess multiple rules, enabling diversity in generated text. Text generation commences with the `Start` variable, and sequentially, rules are applied to create textual content.
+Each rule embodies a left-hand-side variable and a right-hand-side substitution. A variable can possess multiple rules, enabling diversity in the generated text. Text generation commences with the `Start` variable, and sequentially, rules are applied to create textual content.
 
 ### 2. Random Number Generation
 
@@ -35,24 +34,12 @@ For random rule selection, we need random numbers. True random generation is elu
 
 ## Project Structure
 
-You'll produce two Python files:
-
-- **my_rng.py**
-- **cfg.py**
+Python modules:
+- `my_rng.py`: A random number generating system.
+- `cfg.py`: A CFG-based text-generation system.
 
 Both files will contain:
 - A module: A series of reusable Python functions.
 - A program: Direct user-interaction instructions.
-
-**Template:**
-```python
-import this
-import that
-
-def function():
-    code
-
-if __name__ == "__main__":
-    program code
 
 ⚠️ Note: Avoid using Python's built-in random module. Rely solely on the my_rng module for random number generation.
